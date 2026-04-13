@@ -1,4 +1,4 @@
-# eval-box
+# @code4js/eval-box
 
 A secure, extensible JavaScript expression evaluation sandbox. Safely evaluate user-provided expressions without `eval()`, `new Function()`, or `vm` -- just a pure TypeScript lexer, parser, and tree-walk evaluator with configurable security controls.
 
@@ -15,13 +15,13 @@ A secure, extensible JavaScript expression evaluation sandbox. Safely evaluate u
 ## Installation
 
 ```bash
-npm install eval-box
+npm install @code4js/eval-box
 ```
 
 ## Quick Start
 
 ```typescript
-import { EvalBox } from 'eval-box';
+import { EvalBox } from '@code4js/eval-box';
 
 // Static convenience
 EvalBox.evaluate('1 + 2');                          // 3
@@ -218,7 +218,7 @@ box.evaluate('1 + 2');  // "12"
 Plugins bundle related functions, constants, and operators into reusable modules:
 
 ```typescript
-import { EvalBox, EvalBoxPlugin } from 'eval-box';
+import { EvalBox, EvalBoxPlugin } from '@code4js/eval-box';
 
 // Define a plugin
 const datePlugin: EvalBoxPlugin = {
@@ -349,7 +349,7 @@ import {
   SecurityError,   // security violations
   TimeoutError,    // evaluation timeout
   LimitError,      // expression complexity limits
-} from 'eval-box';
+} from '@code4js/eval-box';
 
 try {
   box.evaluate('obj.__proto__', { obj: {} });
@@ -367,7 +367,7 @@ try {
 All AST node types are exported for building custom tooling:
 
 ```typescript
-import { EvalBox, ASTNode } from 'eval-box';
+import { EvalBox, ASTNode } from '@code4js/eval-box';
 
 const ast = EvalBox.parse('1 + 2 * 3');
 // {
@@ -388,7 +388,7 @@ const ast = EvalBox.parse('1 + 2 * 3');
 For advanced use cases, the internal components are fully exported:
 
 ```typescript
-import { Tokenizer, Parser, evaluateAST } from 'eval-box';
+import { Tokenizer, Parser, evaluateAST } from '@code4js/eval-box';
 
 // Tokenize
 const tokenizer = new Tokenizer('1 + 2');

@@ -1,5 +1,5 @@
 {
-  "name": "eval-box",
+  "name": "@code4js/eval-box",
   "version": "1.0.0",
   "description": "Secure, extensible JavaScript expression evaluation sandbox",
   "main": "dist/index.js",
